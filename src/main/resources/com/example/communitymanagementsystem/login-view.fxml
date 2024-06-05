@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="539.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.communitymanagementsystem.LoginView_Controller">
+   <Button fx:id="button_login" layoutX="362.0" layoutY="375.0" mnemonicParsing="false" onAction="#buttonAction_login" text="登录">
+      <font>
+         <Font name="System Bold" size="17.0" />
+      </font>
+   </Button>
+   <TextField fx:id="textField_username" layoutX="298.0" layoutY="187.0" prefHeight="34.0" prefWidth="307.0" />
+   <TextField fx:id="textField_password" layoutX="298.0" layoutY="273.0" prefHeight="34.0" prefWidth="307.0" />
+   <Label layoutX="359.0" layoutY="52.0" text="登录">
+      <font>
+         <Font name="System Bold" size="31.0" />
+      </font>
+   </Label>
+   <Label layoutX="180.0" layoutY="193.0" text="用户名">
+      <font>
+         <Font name="System Bold" size="16.0" />
+      </font>
+   </Label>
+   <Label layoutX="188.0" layoutY="279.0" text="密码">
+      <font>
+         <Font name="System Bold" size="16.0" />
+      </font>
+   </Label>
+</AnchorPane>
