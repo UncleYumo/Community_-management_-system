@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.communitymanagementsystem.HandleEventView_Controller"
-            prefHeight="539.0" prefWidth="780.0">
-
+<AnchorPane prefHeight="539.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.communitymanagementsystem.HandleEventView_Controller">
+    <Label layoutX="336.0" layoutY="14.0" text="用户提交记录">
+        <font>
+          <Font name="System Bold" size="18.0" />
+        </font>
+    </Label>
+    <TableView fx:id="tableView_allUserRecord" layoutX="14.0" layoutY="49.0" prefHeight="329.0" prefWidth="753.0">
+      <columns>
+          <TableColumn fx:id="tableColumn_requestID" prefWidth="58.0" text="记录序号" />
+          <TableColumn fx:id="tableColumn_username" prefWidth="66.0" text="用户名" />
+         <TableColumn fx:id="tableColumn_description" prefWidth="258.0" text="需求描述" />
+         <TableColumn fx:id="tableColumn_phone" prefWidth="105.0" text="联系方式" />
+         <TableColumn fx:id="tableColumn_startTime" prefWidth="106.0" text="提交时间" />
+         <TableColumn fx:id="tableColumn_endTime" prefWidth="102.0" text="解决时间" />
+         <TableColumn fx:id="tableColumn_status" prefWidth="57.0" text="解决状态" />
+      </columns>
+    </TableView>
+   <Button fx:id="button_confirmEvent" layoutX="317.0" layoutY="436.0" mnemonicParsing="false" onAction="#buttonAction_confirmEvent" text="确认处理完成">
+      <font>
+         <Font name="System Bold Italic" size="20.0" />
+      </font>
+   </Button>
 </AnchorPane>

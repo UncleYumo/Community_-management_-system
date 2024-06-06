@@ -76,12 +76,26 @@
 ### 3.2 SQL脚本示例
 
 ```sql
-CREATE TABLE users (
+CREATE TABLE usertable (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    username VARCHAR(255),
+    username VARCHAR(255) UNIQUE ,
     password VARCHAR(255),
     role ENUM('admin', 'resident')
 );
+
+CREATE TABLE property_requests (
+    requestID INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL,
+    phone VARCHAR(255) NOT NULL,
+    startTime datetime NOT NULL,
+    endTime datetime,
+    status ENUM('未处理', '已处理') NOT NULL DEFAULT '未处理',
+    FOREIGN KEY (username) REFERENCES usertable(username)
+);
+
+
+
 
 -- 更多表创建语句依此类推...
 ```

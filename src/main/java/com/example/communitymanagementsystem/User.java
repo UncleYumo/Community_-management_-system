@@ -20,6 +20,12 @@ public class User {
         this.userRole = userRole;
     }
 
+    public User(String userName, String password, String userRole) {
+        this.userName = userName;
+        this.password = password;
+        this.userRole = userRole;
+    }
+
     public User() {
     }
 

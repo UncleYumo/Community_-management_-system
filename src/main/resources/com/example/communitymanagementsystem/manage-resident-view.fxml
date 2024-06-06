@@ -1,14 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.communitymanagementsystem.ManageResidentView_Controller"
-            prefHeight="539.0" prefWidth="780.0">
-
+<AnchorPane prefHeight="539.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.communitymanagementsystem.ManageResidentView_Controller">
+    <TableView fx:id="tableView_user" layoutX="14.0" layoutY="14.0" prefHeight="513.0" prefWidth="355.0">
+      <columns>
+          <TableColumn fx:id="tableColum_id" prefWidth="37.0" text="ID"/>
+          <TableColumn fx:id="tableColum_username" prefWidth="130.0" text="用户名"/>
+          <TableColumn fx:id="tableColum_password" prefWidth="120.0" text="密码"/>
+          <TableColumn fx:id="tableColum_role" prefWidth="67.0" text="权限"/>
+      </columns>
+    </TableView>
+    <TextField fx:id="textField_username" layoutX="505.0" layoutY="129.0" prefHeight="30.0" prefWidth="188.0"/>
+    <TextField fx:id="textField_password" layoutX="505.0" layoutY="199.0" prefHeight="30.0" prefWidth="188.0"/>
+    <ComboBox fx:id="comboBox_role" layoutX="505.0" layoutY="271.0" prefHeight="30.0" prefWidth="188.0"/>
+    <Button fx:id="button_addUser" layoutX="395.0" layoutY="385.0" mnemonicParsing="false"
+            onAction="#buttonAction_addUser" text="增加用户">
+        <font>
+          <Font name="System Bold" size="15.0"/>
+        </font>
+    </Button>
+    <Button fx:id="button_delUser" layoutX="488.0" layoutY="385.0" mnemonicParsing="false"
+            onAction="#buttonAction_delUser" text="删除用户">
+        <font>
+          <Font name="System Bold" size="15.0"/>
+        </font>
+    </Button>
+    <Label layoutX="412.0" layoutY="134.0" text="用户名">
+        <font>
+          <Font name="System Bold" size="15.0"/>
+        </font>
+    </Label>
+    <Label layoutX="419.0" layoutY="204.0" text="密码">
+        <font>
+          <Font name="System Bold" size="15.0"/>
+        </font>
+    </Label>
+    <Label layoutX="419.0" layoutY="276.0" text="权限">
+        <font>
+          <Font name="System Bold" size="15.0"/>
+        </font>
+    </Label>
+    <Button fx:id="button_modifyUser" layoutX="582.0" layoutY="385.0" mnemonicParsing="false"
+            onAction="#buttonAction_modifyUser" text="修改用户">
+        <font>
+          <Font name="System Bold" size="15.0"/>
+        </font>
+    </Button>
+    <Button fx:id="button_queryUser" layoutX="678.0" layoutY="385.0" mnemonicParsing="false"
+            onAction="#buttonAction_queryUser" text="查询用户">
+        <font>
+          <Font name="System Bold" size="15.0"/>
+        </font>
+    </Button>
 </AnchorPane>
