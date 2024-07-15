@@ -1,5 +1,13 @@
 # 基于MVC设计模式和JavaFX的社区管理系统开发手册
 
+> @author uncle_yumo
+
+> @dev-platform IDEA、Scene Builder
+
+> @sql MySQL8.0（位于阿里云ESC）
+
+> @JDK-V 甲骨文JDK21
+
 ## 概述
 
 本手册旨在详尽介绍基于MVC（Model-View-Controller）设计模式和JavaFX GUI框架开发的社区管理系统。系统集成了云端MySQL数据库，旨在提供一个高效、用户友好的平台，用于社区管理人员与居民之间的互动。本系统主要实现以下核心功能：
